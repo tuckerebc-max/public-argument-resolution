@@ -1,0 +1,6 @@
+interface:
+  display_name: "Public Argument Resolution"
+  short_description: "Map public disagreement toward reviewable decisions"
+  default_prompt: "Use $public-argument-resolution to map this public disagreement, criteria, dissent, uncertainty, and human review route."
+policy:
+  allow_implicit_invocation: false

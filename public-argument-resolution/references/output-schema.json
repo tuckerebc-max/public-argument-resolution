@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://anri.local/schemas/public-argument-resolution-payload.schema.json",
+  "title": "Public Argument Resolution payload",
+  "type": "object",
+  "required": ["public_issue_contract", "stasis_map", "stakeholder_map", "competing_position_map", "evidence_provenance_ledger", "comparison_record", "process_plan", "decision_rule", "dissent_uncertainty_record", "ai_transformation_log", "decision_or_unresolved_record", "human_review_route"],
+  "properties": {
+    "public_issue_contract": {"type": "object"},
+    "stasis_map": {"type": "array", "items": {"type": "object"}},
+    "stakeholder_map": {"type": "array", "items": {"type": "object"}},
+    "competing_position_map": {"type": "array", "items": {"type": "object"}},
+    "evidence_provenance_ledger": {"type": "array", "items": {"type": "object"}},
+    "comparison_record": {"type": "object"},
+    "process_plan": {"type": "object"},
+    "decision_rule": {"type": "object"},
+    "dissent_uncertainty_record": {"type": "array", "items": {"type": "object"}},
+    "ai_transformation_log": {"type": "array", "items": {"type": "object"}},
+    "decision_or_unresolved_record": {"type": "object"},
+    "human_review_route": {"type": "object"}
+  }
+}

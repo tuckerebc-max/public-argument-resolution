@@ -1,0 +1,22 @@
+{
+  "evaluator_id": "EVAL-PAR-001",
+  "skill_id": "SKILL-PAR",
+  "competency_id": "COMP-PAR-RESOLUTION",
+  "version": "0.1.0",
+  "canonical_sources": ["SPEC-PAR-001", "ANRI-DOM-PAR-001", "ARCH-PAR-001", "CORP-PAR-001"],
+  "functional_requirement_ids": [],
+  "functional_requirements_note": "SPEC-PAR-001 uses controlled entities, workflow states, and acceptance tests rather than FR-PAR identifiers.",
+  "observable_performance_ids": ["OP-PAR-01", "OP-PAR-02", "OP-PAR-03", "OP-PAR-04", "OP-PAR-05", "OP-PAR-06", "OP-PAR-07", "OP-PAR-08"],
+  "diagnostic_dimensions": ["issue_stasis_fit", "source_reasoning_quality", "stakeholder_access_coverage", "rights_authority_check", "criteria_transparency", "feasibility_consequence_analysis", "dissent_preservation", "uncertainty", "reviewability", "ai_disclosure"],
+  "required_test_ids": ["TST-PAR-001", "TST-PAR-002", "TST-PAR-003", "TST-PAR-004", "TST-PAR-005", "TST-PAR-006", "TST-PAR-007", "TST-PAR-008", "TST-PAR-009", "TST-PAR-010", "TST-PAR-011", "TST-PAR-012", "TST-INT-007", "TST-INT-008"],
+  "checks": [
+    {"check_id":"PAR-CHECK-001","type":"required_paths","paths":["skill_id","skill_version","task_contract","payload.public_issue_contract","payload.stasis_map","payload.stakeholder_map","payload.competing_position_map","payload.evidence_provenance_ledger","payload.comparison_record","payload.process_plan","payload.decision_rule","payload.dissent_uncertainty_record","payload.ai_transformation_log","payload.decision_or_unresolved_record","payload.human_review_route","source_ids","evidence_ids","next_action"],"failure_status":"NEEDS_ISSUE","message":"Issue, stasis, stakeholders, evidence, criteria, decision, dissent, AI, and human-review records are required."},
+    {"check_id":"PAR-CHECK-002","type":"required_paths","paths":["payload.public_issue_contract.authority","payload.public_issue_contract.mode","payload.decision_rule.rule"],"failure_status":"NEEDS_AUTHORITY","message":"Authority, mode, and decision rule must be explicit before resolution."},
+    {"check_id":"PAR-CHECK-003","type":"all_items_have","path":"payload.competing_position_map","fields":["position_id","claim","evidence_ids","uncertainty"],"failure_status":"WEAK_ALTERNATIVE","message":"Each competing position needs recognizable claim, evidence, and uncertainty."},
+    {"check_id":"PAR-CHECK-004","type":"all_items_have","path":"payload.evidence_provenance_ledger","fields":["source_id","locator","currency","rights_status"],"failure_status":"PROVENANCE_AUDIT","message":"Every public-decision evidence entry needs locator, currency, and rights status."},
+    {"check_id":"PAR-CHECK-005","type":"unique_values","path":"source_ids","failure_status":"PROVENANCE_AUDIT","message":"Source IDs must be unique in the decision record."},
+    {"check_id":"PAR-CHECK-006","type":"present_paths","paths":["uncertainty_ids","provenance_ids","learner_decisions","accessibility_notes","rights_and_permissions","ai_use_log"],"failure_status":"NEEDS_REVIEW","message":"Uncertainty, provenance, learner, access, rights, and AI-use fields must remain visible."},
+    {"check_id":"PAR-CHECK-007","type":"manual_review","topic":"authority, rights, currentness, dissent, and high stakes","condition":"Human review is mandatory for every consequential recommendation, decision, settlement, adjudication, legal/policy mode, rights conflict, or high-stakes request."}
+  ],
+  "release_conditions": ["PAR remains explicit-review only.", "No autonomous high-stakes resolution.", "Authority, criteria, rights/access, dissent, currentness, and reviewability remain visible."]
+}

@@ -1,0 +1,15 @@
+{
+  "release_id": "skill-par-0.1.0",
+  "release_date": "2026-08-15",
+  "repository_visibility": "private",
+  "status": "finalized_private_draft",
+  "skill_id": "SKILL-PAR",
+  "package_name": "public-argument-resolution",
+  "competency_id": "COMP-PAR-RESOLUTION",
+  "finalization_report_path": "catalog/finalization-report.json",
+  "source_manifest_path": "catalog/source-manifest.json",
+  "evaluator_entrypoint": "scripts/evaluate_package.py",
+  "repository_validator": "scripts/validate_repository.py",
+  "conditions": ["Independent fresh-context/model-based forward testing remains a human/reviewer gate.", "Jurisdiction-specific current law or policy, rights, accessibility, safety, and high-stakes use require human review.", "The package does not make autonomous consequential decisions."],
+  "checksums_path": "catalog/checksums.json"
+}

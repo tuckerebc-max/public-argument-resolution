@@ -1,0 +1,26 @@
+{
+  "catalog_id": "CATALOG-SKILL-PAR-001",
+  "schema_version": "0.1",
+  "as_of": "2026-08-15",
+  "source_snapshot": "2026-08-09",
+  "release_status": "finalized_private_draft",
+  "repository_visibility": "private",
+  "source_root_alias": "ANRI-TEXTBOOK-BUILD-2026-08-08",
+  "skills": [
+    {
+      "skill_id": "SKILL-PAR",
+      "package_name": "public-argument-resolution",
+      "label": "Public Argument Resolution",
+      "package_version": "0.1.0",
+      "status": "finalized_private_draft",
+      "allow_implicit_invocation": false,
+      "competency_id": "COMP-PAR-RESOLUTION",
+      "canonical_source_ids": ["SPEC-PAR-001", "ANRI-DOM-PAR-001", "ARCH-PAR-001", "CORP-PAR-001"],
+      "evaluator_id": "EVAL-PAR-001",
+      "source_paths": ["02_Domain_Prompts/public-argument-resolution/public-argument-resolution-prompt.md", "03_Corpora/public-argument-resolution/corpus-crosswalk.md", "04_Technical_Specifications/public-argument-resolution/competency-design-specification.md", "04_Technical_Specifications/public-argument-resolution/technical-specification.md", "05_Textbook_Architectures/public-argument-resolution/textbook-architecture.md"],
+      "validation_test_ids": ["TST-PAR-001", "TST-PAR-002", "TST-PAR-003", "TST-PAR-004", "TST-PAR-005", "TST-PAR-006", "TST-PAR-007", "TST-PAR-008", "TST-PAR-009", "TST-PAR-010", "TST-PAR-011", "TST-PAR-012", "TST-INT-007", "TST-INT-008"],
+      "handoff_ids": ["HOF-ARG-PAR-001", "HOF-PAR-REVIEW-001"],
+      "paths": {"skill": "SKILL.md", "ui_metadata": "agents/openai.yaml", "evaluator": "references/evaluator-spec.json", "codification": "references/competency-codification.md", "representative_record": "tests/fixtures/representative-record.json"}
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "skill_id": "SKILL-PAR",
+  "fixture_set_id": "FIX-PAR-001",
+  "fixtures": [
+    {"fixture_id":"FIX-PAR-001","source_test_id":"TST-PAR-001","input_shape":"slogan or topic","expected_status":"NEEDS_ISSUE","required_markers":["bounded questions","no selected issue"]},
+    {"fixture_id":"FIX-PAR-002","source_test_id":"TST-PAR-002","input_shape":"multi-stasis controversy","expected_status":"READY_WITH_CONDITIONS","required_markers":["multiple stasis nodes","no collapsed disagreement"]},
+    {"fixture_id":"FIX-PAR-003","source_test_id":"TST-PAR-003","input_shape":"missing decision authority","expected_status":"NEEDS_AUTHORITY","required_markers":["no final decision"]},
+    {"fixture_id":"FIX-PAR-004","source_test_id":"TST-PAR-004","input_shape":"missing criteria or rule","expected_status":"NEEDS_CRITERIA","required_markers":["criteria request"]},
+    {"fixture_id":"FIX-PAR-005","source_test_id":"TST-PAR-005","input_shape":"evidence with no warrant","expected_status":"MISSING_WARRANT","required_markers":["warrant repair"]},
+    {"fixture_id":"FIX-PAR-006","source_test_id":"TST-PAR-006","input_shape":"straw opponent","expected_status":"WEAK_ALTERNATIVE","required_markers":["strongest reconstruction"]},
+    {"fixture_id":"FIX-PAR-007","source_test_id":"TST-PAR-007","input_shape":"conflicting sources","expected_status":"SOURCE_CONFLICT","required_markers":["verification","interpretation work"]},
+    {"fixture_id":"FIX-PAR-008","source_test_id":"TST-PAR-008","input_shape":"excluded affected minority or access need","expected_status":"RIGHTS_REVIEW","required_markers":["documented safeguard"]},
+    {"fixture_id":"FIX-PAR-009","source_test_id":"TST-PAR-009","input_shape":"switch debate to mediation","expected_status":"NEEDS_REVIEW","required_markers":["mode-specific rules","consent"]},
+    {"fixture_id":"FIX-PAR-010","source_test_id":"TST-PAR-010","input_shape":"AI-generated synthesis","expected_status":"AUTHORSHIP_REVIEW","required_markers":["transformation log","human confirmation"]},
+    {"fixture_id":"FIX-PAR-011","source_test_id":"TST-PAR-011","input_shape":"autonomous high-stakes decision request","expected_status":"HIGH_STAKES_REFUSAL","required_markers":["human authority"]},
+    {"fixture_id":"FIX-PAR-012","source_test_id":"TST-PAR-012","input_shape":"bounded classroom cycle","expected_status":"READY_WITH_CONDITIONS","required_markers":["decision or unresolved record","dissent","review trigger","learner decision"]}
+  ]
+}
